@@ -1,0 +1,40 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# PyTorch / Models
+*.pt
+*.pth
+*.ckpt
+*.bin
+*.safetensors
+finetuned_lora_adapters/
+checkpoints/
+
+# Datasets
+data/
+data/processed/
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Logs and databases
+*.log
+wandb/
+lora_results/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db

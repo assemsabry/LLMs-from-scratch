@@ -1,0 +1,240 @@
+TOP AI RESEARCH PAPERS (PART 2 / 50)
+21. LLaMA (Large Language Model Meta AI) (2023)
+
+https://arxiv.org/abs/2302.13971
+
+LLaMA introduced high-performance LLMs trained efficiently at smaller scales.
+
+Key ideas:
+
+Better data > bigger model
+Training efficiency improvements
+Strong performance at 7B–65B scale
+
+Why it matters:
+
+Opened the era of open-weight LLMs (LLaMA, Mistral, etc.)
+22. LLaMA 2 (2023)
+
+https://arxiv.org/abs/2307.09288
+
+Improved version with:
+
+Better alignment
+Reinforcement Learning from Human Feedback (RLHF)
+Commercial-friendly licensing
+23. InstructGPT (RLHF breakthrough)
+
+https://arxiv.org/abs/2203.02155
+
+This paper introduced modern AI alignment.
+
+Pipeline:
+
+Supervised fine-tuning
+Reward model
+PPO reinforcement learning
+
+Why important:
+
+This is the base of ChatGPT behavior
+24. Direct Preference Optimization (DPO) (2023)
+
+https://arxiv.org/abs/2305.18290
+
+Replaced RLHF complexity with a simpler objective.
+
+Key idea:
+
+Optimize directly from preference data without RL
+25. Chinchilla Scaling Laws (2022)
+
+https://arxiv.org/abs/2203.15556
+
+Most important scaling law paper.
+
+Finding:
+
+Models were previously too big and under-trained
+Optimal training = more data, smaller model
+26. Scaling Laws for Neural Language Models (OpenAI 2020)
+
+https://arxiv.org/abs/2001.08361
+
+Defines how loss scales with:
+
+Model size
+Dataset size
+Compute
+27. FlashAttention (2022)
+
+https://arxiv.org/abs/2205.14135
+
+Huge optimization for transformers.
+
+Key idea:
+
+Memory-efficient attention computation
+
+Result:
+
+2–4x faster training
+28. FlashAttention-2 (2023)
+
+https://arxiv.org/abs/2307.08691
+
+Improved version:
+
+Better GPU utilization
+Even faster inference/training
+29. Mixture of Experts (MoE) (Switch Transformer)
+
+https://arxiv.org/abs/2101.03961
+
+Architecture:
+
+Multiple expert networks
+Only some activated per token
+
+Benefit:
+
+Huge models with low compute cost
+30. GShard (Google MoE Scaling)
+
+https://arxiv.org/abs/2006.16668
+
+First large-scale MoE system.
+
+Key idea:
+
+Distributed expert routing
+31. RETRO (Retrieval-Enhanced Transformer)
+
+https://arxiv.org/abs/2112.04426
+
+Combines:
+
+LLM + external database retrieval
+
+Benefit:
+
+Reduces hallucination
+Improves factual accuracy
+32. RAG (Retrieval-Augmented Generation)
+
+https://arxiv.org/abs/2005.11401
+
+Core idea:
+
+Retrieve documents + generate answer
+
+Used in:
+
+Chatbots
+Enterprise AI systems
+33. PaLM (Pathways Language Model)
+
+https://arxiv.org/abs/2204.02311
+
+Google’s large-scale model.
+
+Key features:
+
+540B parameters
+Strong reasoning abilities
+34. PaLM 2 (2023)
+
+https://arxiv.org/abs/2305.10403
+
+Improved reasoning + multilingual performance.
+
+35. DeepSpeed (Microsoft Optimization System)
+
+https://arxiv.org/abs/1910.02054
+
+System for:
+
+Training massive models efficiently
+
+Key features:
+
+ZeRO optimizer
+Memory partitioning
+36. ZeRO Optimization (DeepSpeed)
+
+https://arxiv.org/abs/1910.02054
+
+Breaks optimizer states into shards across GPUs.
+
+Result:
+
+Enables trillion-parameter training
+37. T5 (Text-to-Text Transfer Transformer)
+
+https://arxiv.org/abs/1910.10683
+
+Everything becomes text-to-text task.
+
+Example:
+
+translation → text generation
+classification → text output
+38. BART (Denoising Autoencoder for NLP)
+
+https://arxiv.org/abs/1910.13461
+
+Combines:
+
+BERT encoder
+GPT decoder
+
+Used for:
+
+summarization
+generation
+39. ELECTRA (Efficient Pretraining)
+
+https://arxiv.org/abs/2003.10555
+
+Instead of masking words:
+
+Detect replaced tokens
+
+More efficient than BERT.
+
+40. Whisper (Speech Recognition Model)
+
+https://arxiv.org/abs/2212.04356
+
+OpenAI speech-to-text model.
+
+Key ideas:
+
+Large-scale multilingual training
+Robust speech recognition
+SUMMARY OF PART 2
+
+This section covered:
+
+1. Alignment & Human Feedback
+InstructGPT
+RLHF
+DPO
+2. Scaling Laws
+Chinchilla
+OpenAI scaling laws
+3. Efficient Training
+DeepSpeed
+ZeRO
+FlashAttention
+4. Advanced Architectures
+MoE (Switch Transformer, GShard)
+T5, BART, ELECTRA
+5. Modern LLM Systems
+LLaMA / LLaMA 2
+PaLM models
+6. Retrieval Systems
+RAG
+RETRO
+7. Multimodal / Speech
+Whisper

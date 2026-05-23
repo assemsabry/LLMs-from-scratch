@@ -1,0 +1,260 @@
+AI Engineering Complete Roadmap & Reference
+1. Foundations
+1.1 Mathematics
+Linear Algebra
+Vectors, matrices, tensors
+Eigenvalues & eigenvectors
+Calculus
+Derivatives, partial derivatives
+Chain rule (critical for backpropagation)
+Probability & Statistics
+Distributions (Normal, Bernoulli, etc.)
+Expectation, variance
+Bayesian inference
+1.2 Programming
+Python (mandatory)
+Libraries:
+NumPy
+Pandas
+Matplotlib
+Deep Learning Frameworks:
+PyTorch (preferred)
+TensorFlow / Keras
+2. Machine Learning (ML)
+2.1 Types of Learning
+Supervised Learning
+Unsupervised Learning
+Semi-supervised Learning
+Reinforcement Learning
+2.2 Core Algorithms
+Linear Regression
+Logistic Regression
+Decision Trees
+Random Forest
+SVM (Support Vector Machines)
+K-Means Clustering
+PCA (Dimensionality Reduction)
+2.3 Key Concepts
+Overfitting / Underfitting
+Bias vs Variance
+Cross-validation
+Feature Engineering
+Regularization (L1, L2)
+3. Deep Learning (DL)
+3.1 Neural Network Basics
+Neuron = Input + Weights + Bias
+Summation:
+z = w₁x₁ + w₂x₂ + ... + b
+Activation Function:
+a = f(z)
+3.2 Activation Functions
+ReLU
+Sigmoid
+Tanh
+Softmax
+GELU (used in transformers)
+3.3 Loss Functions
+MSE (Regression)
+Cross Entropy (Classification)
+KL Divergence
+Hinge Loss
+3.4 Optimizers
+SGD (Stochastic Gradient Descent)
+Adam
+AdamW (used in LLMs)
+RMSProp
+3.5 Learning Rate (LR)
+Constant LR
+Step Decay
+Cosine Annealing
+Warmup + Decay (very important in LLMs)
+4. Neural Network Architectures
+4.1 Feedforward Neural Networks (FNN)
+4.2 Convolutional Neural Networks (CNN)
+Used for images
+Key concepts:
+Filters
+Stride
+Padding
+4.3 Recurrent Neural Networks (RNN)
+Sequential data
+Problems: Vanishing gradients
+4.4 LSTM / GRU
+Solve RNN limitations
+Memory cells
+4.5 Transformers (MOST IMPORTANT)
+Self-Attention
+Multi-head Attention
+Positional Encoding
+5. Large Language Models (LLMs)
+5.1 Core Concepts
+Tokens
+Context Length
+Attention Mechanism
+Scaling Laws
+5.2 Important Architectures
+GPT (Decoder-only)
+BERT (Encoder-only)
+T5 (Encoder-Decoder)
+5.3 Training Phases
+Pretraining (unsupervised)
+Fine-tuning
+Instruction Tuning
+RLHF (Reinforcement Learning with Human Feedback)
+6. Tokenization
+6.1 Types
+Word-level
+Character-level
+Subword:
+BPE (Byte Pair Encoding)
+WordPiece
+SentencePiece
+6.2 Important Concepts
+Vocabulary size
+Token distribution
+Compression ratio
+7. Model Training Details
+7.1 Core Terms
+Parameters: weights of the model
+Gradients: direction of optimization
+Epoch: one full pass over dataset
+Batch size: number of samples per step
+7.2 Training Pipeline
+Data collection
+Data cleaning
+Tokenization
+Dataset batching
+Model forward pass
+Loss computation
+Backpropagation
+Optimizer step
+7.3 Hyperparameters
+Learning rate
+Batch size
+Sequence length
+Hidden size
+Number of layers
+Dropout
+8. Efficient Training & Optimization
+8.1 Mixed Precision
+FP32 → FP16 / BF16
+Faster + less memory
+8.2 Gradient Techniques
+Gradient Clipping
+Gradient Accumulation
+8.3 Parallelism
+Data Parallelism
+Model Parallelism
+Pipeline Parallelism
+9. Parameter-Efficient Fine-Tuning (PEFT)
+9.1 LoRA (Low-Rank Adaptation)
+Freeze base model
+Train small rank matrices
+Reduces memory usage
+9.2 QLoRA
+Combines:
+Quantization (4-bit)
+LoRA
+Enables training on low VRAM GPUs
+9.3 Other Methods
+Prefix Tuning
+Adapter Layers
+10. Quantization & Compression
+10.1 Quantization
+FP32 → INT8 / INT4
+Reduces size and latency
+10.2 Pruning
+Remove unnecessary weights
+10.3 Distillation
+Train smaller model from larger one
+11. Model Types
+11.1 LLM (Large Language Models)
+Text generation
+11.2 SLM (Small Language Models)
+Lightweight, faster inference
+11.3 VLM (Vision Language Models)
+Combine text + images
+11.4 Multimodal Models
+Text + Image + Audio + Video
+12. Evaluation Metrics
+12.1 NLP
+Perplexity
+BLEU
+ROUGE
+12.2 Classification
+Accuracy
+Precision / Recall
+F1-score
+13. Data Engineering for AI
+13.1 Dataset Types
+Text corpora
+Instruction datasets
+Conversation datasets
+13.2 Data Cleaning
+Remove duplicates
+Normalize text
+Filter noise
+13.3 Data Scaling
+Billions of tokens
+Web scraping pipelines
+14. Inference Optimization
+14.1 Techniques
+KV Cache
+Flash Attention
+Speculative Decoding
+14.2 Serving
+ONNX
+TensorRT
+vLLM
+TGI (Text Generation Inference)
+15. Deployment
+15.1 APIs
+FastAPI
+Flask
+15.2 Infrastructure
+GPUs (NVIDIA)
+Cloud:
+AWS
+GCP
+Azure
+15.3 Scaling
+Load balancing
+Distributed inference
+16. Advanced Topics
+16.1 Mixture of Experts (MoE)
+Multiple expert networks
+Gating mechanism
+16.2 Retrieval-Augmented Generation (RAG)
+Combine LLM + external knowledge
+16.3 Agents
+Tool usage
+Memory systems
+16.4 Continual Learning
+Models learn over time
+Avoid catastrophic forgetting
+17. Key Terminology
+Token: smallest unit of text
+Parameter: trainable weight
+Embedding: vector representation
+Attention: relevance scoring
+Layer: transformation step
+Hidden State: internal representation
+Logits: raw output before softmax
+Inference: model usage (not training)
+18. Recommended Learning Order
+Math + Python
+Machine Learning
+Neural Networks Basics
+Deep Learning
+Transformers
+LLM Training
+Tokenization + Optimization
+LoRA / QLoRA
+Deployment
+Advanced Systems (MoE, RAG, Agents)
+19. Practical Projects
+Build a simple neural network from scratch
+Train a small GPT model
+Fine-tune LLM using LoRA
+Build chatbot with RAG
+Deploy model API
