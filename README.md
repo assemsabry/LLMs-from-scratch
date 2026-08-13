@@ -105,5 +105,5 @@ This project is open-source and free to use. However, you must explicitly attrib
 **Assem Sabry**
 AI Engineer & Researcher | Founder of TokenAI
 
-* Assem Website: https://assem.cloud/
-* TokenAI Website: https://tokenai.cloud/
+* Assem Website: https://assem.one/
+* TokenAI Website: https://tokenai.llc/
