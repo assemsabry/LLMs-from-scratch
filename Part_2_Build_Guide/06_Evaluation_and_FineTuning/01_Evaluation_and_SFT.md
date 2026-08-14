@@ -4,6 +4,8 @@ After pretraining, you have a "Base Model." A base model is not an assistant. If
 
 To turn a Base Model into an Assistant (like ChatGPT), you must perform Supervised Fine-Tuning (SFT) and Alignment.
 
+This stage is where a technically capable model starts becoming a useful product.
+
 ---
 
 ## 13.1 Pre-Training Evaluation
@@ -11,6 +13,19 @@ To turn a Base Model into an Assistant (like ChatGPT), you must perform Supervis
 Before fine-tuning, you must evaluate if the pretraining actually worked.
 *   **Perplexity:** The primary mathematical metric. It measures how "surprised" the model is by real text. A lower perplexity means the model accurately predicts language.
 *   **Zero-Shot Benchmarks:** You test the base model on standardized academic tests (like MMLU, GSM8K, or HumanEval). You do this to see if the model has naturally absorbed factual knowledge, math, and coding abilities during pretraining.
+
+### Why pretraining evaluation is not enough
+
+A model can score well on pretraining-style metrics and still be a bad assistant.
+
+Why?
+
+Because there is a difference between:
+
+- predicting language well
+- behaving helpfully in a user-facing setting
+
+This is why evaluation must expand after SFT.
 
 ## 14.1 Supervised Fine-Tuning (SFT)
 
@@ -21,6 +36,31 @@ To teach the model to act as an assistant, you train it on a highly curated data
 *   **The Process:** It is exactly the same as the pretraining loop (next-token prediction with Cross-Entropy Loss), but you ONLY calculate the loss on the *Response* portion. You do not punish the model for failing to predict the *Prompt*.
 *   **Data Quality over Quantity:** Unlike pretraining which requires trillions of tokens, SFT requires only 10,000 to 100,000 extremely high-quality examples. A human should review every single SFT example.
 
+### What strong SFT data looks like
+
+Good SFT examples are:
+
+- clear
+- correct
+- well-formatted
+- diverse
+- representative of real user requests
+
+Weak SFT data often causes:
+
+- repetitive answers
+- weak formatting
+- shallow reasoning
+- poor coding style
+- inconsistent refusal behavior
+
+### The hidden lesson of SFT
+
+SFT is not only teaching knowledge.
+It is teaching behavior and response shape.
+
+That is why carefully curated examples can dramatically change user experience.
+
 ## 14.2 Parameter-Efficient Fine-Tuning (PEFT) / LoRA
 
 If you want to fine-tune a massive 7B parameter model, you usually need the same massive GPU cluster used for pretraining. This is too expensive.
@@ -29,9 +69,87 @@ If you want to fine-tune a massive 7B parameter model, you usually need the same
 Instead of updating all 7 Billion parameters, you freeze the original base model entirely. You then inject tiny, mathematically simplified "adapter" matrices into the Transformer blocks. You only train these tiny adapters.
 *   **Result:** You can fine-tune a 7B model on a single consumer GPU (like an RTX 3090) in a few hours, achieving 99% of the quality of full fine-tuning.
 
+### Why LoRA became so important
+
+LoRA changed who can fine-tune models.
+
+Without PEFT methods, only teams with large budgets could adapt serious models.
+With LoRA, individuals and small teams can:
+
+- adapt open models
+- build domain assistants
+- customize behavior
+- experiment rapidly
+
+This is one of the main reasons open-source LLM development accelerated so quickly.
+
 ## 14.3 Alignment (RLHF / DPO)
 
 Even after SFT, the model might give technically correct but dangerous or unhelpful answers. You must "align" it to human preferences.
 
 *   **RLHF (Reinforcement Learning from Human Feedback):** You train a secondary "Reward Model" based on human ratings (e.g., Human A rated this response 5 stars, this one 1 star). You then use Reinforcement Learning (PPO algorithm) to update the LLM to maximize the Reward Model's score.
 *   **DPO (Direct Preference Optimization):** The modern, simpler alternative to RLHF. Instead of building a complex Reward Model, you directly modify the Loss Function in the training loop. You feed the model pairs of responses (one Good, one Bad) and the math directly forces the model to increase the probability of the Good response and decrease the probability of the Bad response.
+
+### Why DPO became attractive
+
+DPO is popular because it is simpler than full RLHF.
+It avoids some of the engineering complexity of:
+
+- separate reward-model training
+- PPO instability
+- multi-stage RL pipelines
+
+This makes it especially attractive in open-source fine-tuning workflows.
+
+## 14.4 Post-SFT Evaluation
+
+After SFT, you should evaluate much more than perplexity.
+
+Important dimensions include:
+
+- instruction following
+- factuality
+- code quality
+- formatting consistency
+- refusal behavior
+- domain usefulness
+
+### Evaluation types
+
+1. **Automatic benchmarks**
+2. **Human review**
+3. **Task-specific test sets**
+4. **Safety and refusal tests**
+5. **Regression testing across versions**
+
+## 14.5 What a Good Fine-Tuning Pipeline Looks Like
+
+A serious fine-tuning workflow usually includes:
+
+1. define the target behavior
+2. collect or curate examples
+3. clean and format the dataset
+4. split train and validation sets
+5. fine-tune with full FT or PEFT
+6. evaluate on quality and safety
+7. inspect failures manually
+8. iterate on data rather than only tweaking hyperparameters
+
+### Important lesson
+
+In many cases, better data improves the result more than another round of random hyperparameter tuning.
+
+## 14.6 What Learners Should Build
+
+To really understand evaluation and SFT, build a mini pipeline that does the following:
+
+1. define a small instruction dataset
+2. fine-tune a small model or adapter
+3. compare before vs after outputs
+4. test formatting, correctness, and refusal behavior
+5. document the failure cases
+
+This teaches the difference between:
+
+- having a model
+- shaping a model into a useful assistant

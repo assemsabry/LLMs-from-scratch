@@ -34,3 +34,32 @@ Move from algorithms to neural architecture.
 ## Phase 6: Advanced Systems
 1.  **RAG:** Build systems that combine LLMs with Vector Databases.
 2.  **Agents:** Build autonomous systems using frameworks like LangChain or by writing your own tool-use loops.
+
+## Phase 7: Modern AI Systems Thinking
+
+By 2026, serious AI engineering increasingly requires more than model training.
+
+You should also learn:
+
+1. **Evaluation:** How to measure quality, safety, and regressions
+2. **Serving:** How latency, batching, and KV cache affect products
+3. **Safety and Governance:** How approvals, guardrails, and provenance fit into real deployments
+4. **Product Integration:** How tools, APIs, and workflows turn a model into a useful system
+
+## Final Advice
+
+Do not rush to the most fashionable topic first.
+
+The strongest learners usually build in this order:
+
+- fundamentals
+- deep learning
+- transformers
+- LLM training
+- fine-tuning
+- deployment
+- RAG
+- agents
+- evaluation and systems design
+
+That order gives you real understanding instead of shallow trend-chasing.

@@ -14,6 +14,20 @@ An LLM's knowledge is frozen at the time it finishes training. If you ask a mode
 3.  **The Generation:** You inject those 3 paragraphs directly into the Prompt. `Prompt: Based on the following documents: [Doc1, Doc2, Doc3], answer the user's question.`
 4.  **Result:** The LLM now has perfect, up-to-date memory and cites its sources.
 
+### What modern RAG adds
+
+In real systems, modern RAG often includes:
+
+- better chunking
+- metadata filtering
+- reranking
+- source display
+- refresh jobs
+- multi-step retrieval
+
+So the real skill is not only "vector search."
+It is designing a retrieval pipeline that returns the right evidence at the right time.
+
 ## 16.2 Autonomous Agents
 
 LLMs do not just have to answer questions; they can perform actions.
@@ -23,6 +37,33 @@ By using tools (function calling), an LLM can become an Agent.
 *   Instead of generating text for the user, the LLM generates a JSON object instructing the system to execute a tool.
 *   The system runs the Python code or searches Google, and feeds the result *back* into the LLM.
 *   The LLM reads the result and decides what to do next.
+
+### Why agents changed the field
+
+This is one of the most important shifts in modern AI.
+
+The system is no longer only completing text.
+It is now participating in workflows.
+
+That means useful AI products increasingly depend on:
+
+- tool use
+- multi-step planning
+- verification
+- memory
+- safety gates
+
+### Important warning
+
+An autonomous agent without constraints is not a product.
+It is a liability.
+
+Modern agent systems need:
+
+- permission boundaries
+- logging
+- retry rules
+- human approval for risky actions
 
 ## 17.1 Building LLMs: The Final Summary
 
@@ -35,5 +76,19 @@ Building an LLM from scratch is a monumental task. The pipeline follows a strict
 5.  **Scaling:** The math is distributed across hundreds of GPUs using Data and Tensor Parallelism.
 6.  **SFT & Alignment:** The Base Model is fine-tuned (often using LoRA) to follow instructions, and aligned to human preferences via DPO or RLHF.
 7.  **Deployment:** The final weights are Quantized to 4-bit and served via a highly optimized C++ inference engine like vLLM.
+8.  **Modern Systems Layer:** Useful AI products now also add retrieval, tools, memory, safety, and deployment governance.
 
 You now possess the complete theoretical and practical roadmap to building Large Language Models.
+
+### Final modern takeaway
+
+In 2026, building an LLM system well usually means building more than the model itself.
+
+The strongest systems combine:
+
+- model quality
+- retrieval
+- tool use
+- inference optimization
+- safety controls
+- product integration

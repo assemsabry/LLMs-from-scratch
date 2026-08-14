@@ -19,3 +19,19 @@ Theory without implementation is useless. The best way to learn Machine Learning
 ## 19.4 Level 4: Full Stack AI Engineer
 *   **RAG System:** Build a Retrieval-Augmented Generation pipeline using LangChain, a vector database (Chroma/Pinecone), and an LLM API.
 *   **Deploy a Model:** Containerize your fine-tuned model using Docker and deploy it to a cloud server using FastAPI or vLLM.
+
+## 19.5 Level 5: Modern AI Systems
+*   **Tool-Using Agent:** Build an assistant that can search, inspect files, and verify results across multiple steps.
+*   **Evaluation Harness:** Build a benchmark and regression suite for factuality, formatting, code quality, groundedness, and refusal behavior.
+
+### Why this progression works
+
+Each level adds one new layer of complexity:
+
+1. model basics
+2. neural training
+3. transformers and LLMs
+4. deployment and productization
+5. modern system behavior
+
+This is much more effective than jumping directly to the most fashionable topic.

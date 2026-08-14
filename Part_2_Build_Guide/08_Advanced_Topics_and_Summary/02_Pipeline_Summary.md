@@ -27,3 +27,40 @@ You can find them in the respective `code_examples` directories.
 ## Conclusion
 
 By studying these scripts alongside the theoretical markdown files, you bridge the gap between abstract neural network concepts and concrete engineering implementation. This completes the LLMs-from-scratch repository.
+
+### How to use the code examples properly
+
+Do not treat these scripts as production-ready frontier systems.
+
+Use them as:
+
+- conceptual anchors
+- implementation references
+- starting points for your own experiments
+
+The real learning happens when you:
+
+- run them
+- modify them
+- break them
+- inspect outputs
+- compare design alternatives
+
+## A Modern End-to-End Mental Model
+
+After studying the full repository, your mental model should be:
+
+1. collect and clean data
+2. build a tokenizer
+3. define the model
+4. train with next-token prediction
+5. evaluate the base model
+6. fine-tune and align it
+7. optimize inference
+8. deploy it behind an API
+9. add retrieval, tools, and safety if you want a useful modern system
+
+That is the difference between:
+
+- reading about LLMs
+- and understanding how to build one

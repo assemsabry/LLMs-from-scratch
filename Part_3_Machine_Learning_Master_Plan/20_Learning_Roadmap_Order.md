@@ -31,3 +31,29 @@ Do not jump straight into building Large Language Models. Follow this sequential
 1.  Learn PEFT and LoRA fine-tuning.
 2.  Build RAG systems.
 3.  Learn containerization (Docker) and deployment.
+
+### A better modern interpretation
+
+By 2026, "advanced LLMs" usually means more than model fine-tuning.
+
+It also means learning:
+
+- evaluation
+- inference optimization
+- APIs
+- agents
+- safety and governance
+
+### What this roadmap is really optimizing for
+
+This learning order is not trying to make you memorize every topic quickly.
+It is trying to make each later topic understandable when you arrive there.
+
+That is why:
+
+- math comes before backpropagation
+- backpropagation comes before transformers
+- transformers come before LLM deployment
+- deployment comes before agents
+
+Skipping the order often creates fake confidence and weak intuition.
