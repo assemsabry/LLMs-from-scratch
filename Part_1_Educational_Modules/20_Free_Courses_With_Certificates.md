@@ -39,13 +39,6 @@ For someone building an LLM from scratch, use the resources in this order:
 - **Credential check:** the official SkillUp catalog states that its free machine-learning courses include shareable completion certificates.
 - **Course catalog:** [Free Machine Learning Courses](https://www.simplilearn.com/skillup-free-online-courses/machine-learning)
 
-### Artificial Intelligence Fundamentals - IBM SkillsBuild
-
-- **Level:** Foundational to intermediate
-- **Covers:** AI concepts, natural language processing, image analysis, responsible AI, and practical AI workflows.
-- **Credential check:** IBM's catalog marks qualifying learning paths with “Earn a digital credential” and describes the Artificial Intelligence Fundamentals credential.
-- **Official catalog:** [IBM SkillsBuild AI learning catalog](https://skillsbuild.org/learning-catalog/university-catalog?topic=ai)
-
 ## Neural Networks And Deep Learning
 
 ### Free Deep Learning Tutorial for Beginners - Simplilearn SkillUp
@@ -155,6 +148,10 @@ The following types of resources are intentionally not listed as qualifying cert
 - YouTube videos and playlists without a provider-issued completion credential.
 - Platforms that issue only a progress badge when the user specifically asked for a completion certificate.
 - Search-result pages, unofficial mirrors, and course aggregators that do not control the credential.
+
+IBM SkillsBuild is a useful alternative source with free learning and digital credentials, but it is kept outside this qualifying list because a digital credential is not necessarily a completion certificate.
+
+- Alternative catalog: [IBM SkillsBuild AI learning catalog](https://skillsbuild.org/learning-catalog/university-catalog?topic=ai)
 
 You can still find excellent no-certificate learning material in the repository's [YouTube Learning Roadmap](../../README.md#youtube-learning-roadmap). This file is the stricter certificate-qualified list.
 
