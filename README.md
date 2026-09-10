@@ -8,7 +8,7 @@ This repository exists for one main reason: to help people learn how large langu
 
 It is meant to be practical, not just inspirational. The goal is to move from "I use LLMs" to "I understand how to build one."
 
-**Last updated:** August 13, 2026
+**Last updated:** September 11, 2026
 
 ## What This Repository Teaches
 
@@ -116,9 +116,10 @@ The best way to study this repository is in this order:
 3. Move to `Part_2_Build_Guide` for the end-to-end LLM pipeline
 4. Read the recent trends breakdown in `Part_1_Educational_Modules/16_Advanced_Topics/03_AI_Trends_May_to_Aug_2026.md`
 5. Read the engineering translation in `Part_2_Build_Guide/08_Advanced_Topics_and_Summary/03_How_Recent_AI_Trends_Change_Your_LLM_Build.md`
-6. Use `Part_3_Machine_Learning_Master_Plan` as your long-term roadmap
-7. Study `Part_5_Top_AI_Research_Papers` to deepen your research understanding
-8. Open `src/` and start implementing, running, and modifying code
+6. Use `Part_1_Educational_Modules/20_Free_Courses_With_Certificates.md` to choose free courses that also issue completion credentials
+7. Use `Part_3_Machine_Learning_Master_Plan` as your long-term roadmap
+8. Study `Part_5_Top_AI_Research_Papers` to deepen your research understanding
+9. Open `src/` and start implementing, running, and modifying code
 
 The repository is designed to be both:
 
@@ -156,6 +157,8 @@ python src/deploy/api.py
 ## YouTube Learning Roadmap
 
 All external learning links below are YouTube links only.
+
+For courses that must be free and include a completion certificate, use the separate [Free AI Courses With Completion Certificates](Part_1_Educational_Modules/20_Free_Courses_With_Certificates.md) guide. YouTube resources remain valuable for explanation and breadth, but they are not counted as certificate-qualified courses unless the provider explicitly issues one.
 
 ### Community-Recommended Sources
 
