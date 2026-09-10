@@ -10,6 +10,12 @@ It is meant to be practical, not just inspirational. The goal is to move from "I
 
 **Last updated:** September 11, 2026
 
+> ## Join Our AI Learning Community
+>
+> Stay connected with our learning community on [WhatsApp](https://chat.whatsapp.com/DYsuyL2CEWFArfqscHlfxx) and [Facebook](https://www.facebook.com/groups/perceptionai).
+>
+> We publish new courses, learning resources, explanations, opportunities, and AI updates in the community first, always completely free. Join us so you do not miss the next resource.
+
 ## What This Repository Teaches
 
 By working through this repository, you should be able to understand:
