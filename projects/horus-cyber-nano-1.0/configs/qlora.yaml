@@ -1,0 +1,58 @@
+model:
+  id: moonshotai/Kimi-VL-A3B-Instruct
+  revision: 398eede0903cd983a2bfa0cc634e9ac1d843f375
+  trust_remote_code: true # required by the official Kimi-VL custom architecture
+  load_in_4bit: true
+  torch_dtype: bfloat16
+  device_map: auto
+  target_modules:
+    - q_proj
+    - q_a_proj
+    - q_b_proj
+    - kv_a_proj_with_mqa
+    - kv_b_proj
+    - o_proj
+    - gate_proj
+    - up_proj
+    - down_proj
+
+stages:
+  stage1_owasp:
+    description: Defensive local AppSec and OWASP workflow SFT
+    train_file: data/raw/owasp-sft/train.jsonl
+    validation_file: data/raw/owasp-sft/validation.jsonl
+    output_dir: runs/hcn-reproduction/stage1-owasp
+    adapter_from: null
+    filter_task: null
+    epochs: 1
+  stage2_secure_repair:
+    description: Secure Python conversation SFT, continuing stage 1 adapter
+    train_file: data/raw/secucoder/train.jsonl
+    validation_file: data/raw/secucoder/validation.jsonl
+    output_dir: runs/hcn-reproduction/stage2-secure-repair
+    adapter_from: runs/hcn-reproduction/stage1-owasp
+    filter_task: conversation
+    epochs: 1
+
+data:
+  max_seq_length: 2048
+
+lora:
+  r: 16
+  alpha: 32
+  dropout: 0.05
+  bias: none
+
+training:
+  output_dir: runs/hcn-reproduction
+  learning_rate: 0.0001
+  num_train_epochs: 1
+  per_device_train_batch_size: 1
+  gradient_accumulation_steps: 16
+  gradient_checkpointing: true
+  logging_steps: 10
+  save_steps: 100
+  evaluation_strategy: steps
+  eval_steps: 100
+  seed: 42
+  report_to: none

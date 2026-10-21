@@ -113,6 +113,10 @@ The `src/` directory contains runnable code for the practical side of the reposi
 - `src/finetune/` for LoRA and PEFT workflows
 - `src/deploy/` for serving and inference APIs
 
+### Real-World Projects (`projects/`)
+
+The `projects/` directory contains evidence-based, runnable projects that apply the concepts above to published models and datasets. The first project, [Horus Cyber Nano 1.0](projects/horus-cyber-nano-1.0/README.md), includes a staged Kimi 16B fine-tuning workflow, downloaded Hugging Face training data with provenance, benchmark repositories, and guided notebooks. It is an independent reproduction/adaptation workflow; the original private training recipe is not publicly available.
+
 ## How To Use This Repository
 
 The best way to study this repository is in this order:

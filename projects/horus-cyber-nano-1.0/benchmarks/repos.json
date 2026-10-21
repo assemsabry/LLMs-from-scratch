@@ -1,0 +1,20 @@
+{
+  "text_runners": [
+    {"name": "lm-evaluation-harness", "url": "https://github.com/EleutherAI/lm-evaluation-harness"},
+    {"name": "MMLU", "url": "https://github.com/hendrycks/test"},
+    {"name": "GPQA", "url": "https://github.com/idavidrein/gpqa"},
+    {"name": "AIME 2025", "url": "https://github.com/math-ai-org/aime25"}
+  ],
+  "multimodal_runners": [
+    {"name": "VLMEvalKit", "url": "https://github.com/open-compass/VLMEvalKit"},
+    {"name": "Math-Vision", "url": "https://github.com/YerongLi/MathVision"},
+    {"name": "MathVista", "url": "https://github.com/lupantech/MathVista"},
+    {"name": "MMBench", "url": "https://github.com/open-compass/MMBench"},
+    {"name": "MMStar", "url": "https://github.com/MMStar-Benchmark/MMStar"},
+    {"name": "VideoMMMU", "url": "https://github.com/EvolvingLMMs-Lab/VideoMMMU"}
+  ],
+  "agent_runners": [
+    {"name": "Terminal-Bench", "url": "https://github.com/laude-institute/terminal-bench"},
+    {"name": "SWE-bench", "url": "https://github.com/SWE-bench/SWE-bench"}
+  ]
+}

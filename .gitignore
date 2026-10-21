@@ -15,6 +15,12 @@ checkpoints/
 # Datasets
 data/
 data/processed/
+!projects/horus-cyber-nano-1.0/data/
+projects/horus-cyber-nano-1.0/data/raw/
+!projects/horus-cyber-nano-1.0/data/README.md
+!projects/horus-cyber-nano-1.0/data/SOURCES.md
+!projects/horus-cyber-nano-1.0/data/eval/
+!projects/horus-cyber-nano-1.0/data/eval/sample_prompts.jsonl
 
 # Environments
 .env
