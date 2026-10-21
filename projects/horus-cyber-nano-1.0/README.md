@@ -43,9 +43,10 @@ python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 python src/inspect_model.py --model moonshotai/Kimi-VL-A3B-Instruct --revision 398eede0903cd983a2bfa0cc634e9ac1d843f375 --trust-remote-code
+python scripts/download_data.py
 ```
 
-This workflow trains Kimi-VL, not the published HCN checkpoint, and is an independent reproduction experiment. Kimi-VL is MIT licensed as listed on its model card. Dataset rights are separate. Stage 2 uses SecuCoder under CC BY-NC-SA 4.0; do not use that stage or its resulting adapter commercially. The full source/license record is in [data/SOURCES.md](data/SOURCES.md).
+This workflow trains Kimi-VL, not the published HCN checkpoint, and is an independent reproduction experiment. Kimi-VL is MIT licensed as listed on its model card. Dataset rights are separate. `scripts/download_data.py` fetches the pinned data and verifies each SHA-256. Stage 2 uses SecuCoder under CC BY-NC-SA 4.0; do not use that stage or its resulting adapter commercially. The full source/license record is in [data/SOURCES.md](data/SOURCES.md).
 
 Only after confirming the checkpoint's supported auto classes, actual module names, memory budget, license, and dataset rights:
 

@@ -2,6 +2,8 @@
 
 Two dataset snapshots are downloaded locally under `data/raw/`; see [SOURCES.md](SOURCES.md) for pinned source revisions, licenses, sizes, and checksums. They are git-ignored. The other rows below are research leads only, not approved training inputs. Recheck cards and rights before use.
 
+After cloning the project, run `python scripts/download_data.py` to fetch the four pinned files and verify their hashes.
+
 | Dataset | Link | Candidate use | License / caution |
 |---|---|---|---|
 | SecEval | [XuanwuAI/SecEval](https://huggingface.co/datasets/XuanwuAI/SecEval) | Cybersecurity knowledge QA; better as held-out evaluation first | Card reports CC BY-NC-SA 4.0; non-commercial/share-alike constraints; generated MCQ benchmark, incomplete topic scope. |
